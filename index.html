@@ -14,150 +14,149 @@
 
 <body>
   <div class="jumbotron">
-    <h2> Welcome to Ray' Pizzeria. Please submit your order below</h2>
+    <h2> Welcome to Logan's Pizzeria. Please submit your order below</h2>
   </div>
- 
-  <img src="img/pizzeria.png" alt="logo" class = "center">  
-      <div class="column">
-        <div class="card p-4">
-          <form class="form-group" id="pizzaOrder">
-            <div class="row container p-2">
-              <div class="col">
-                <p>Size</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="size">
-                  <option></option>
-                  <option value="small">Small, 10"</option>
-                  <option value="medium">Medium, 14"</option>
-                  <option value="large">Large, 18"</option>
-                  <option value="XL">Extra-Large, 22"</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Sauce</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="sauce">
-                  <option></option>
-                  <option>robust tomato sauce</option>
-                  <option>alfredo sauce</option>
-                  <option>garlic parmesan white sauce</option>
-                  <option>pesto</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Cheese</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="cheese">
-                  <option></option>
-                  <option>regular cheese</option>
-                  <option>light cheese</option>
-                  <option>extra cheese</option>
-                  <option>no cheese</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Meat 1</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="meat1">
-                  <option></option>
-                  <option>pepperoni</option>
-                  <option>sausage</option>
-                  <option>ham</option>
-                  <option>beef</option>
-                  <option>chicken</option>
-                  <option>bacon</option>
-                  <option>none</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Meat 2</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="meat2">
-                  <option></option>
-                  <option>pepperoni</option>
-                  <option>sausage</option>
-                  <option>ham</option>
-                  <option>beef</option>
-                  <option>chicken</option>
-                  <option>bacon</option>
-                  <option>none</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Veggie 1</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="veggie1">
-                  <option></option>
-                  <option>Onions</option>
-                  <option>Tomatoes</option>
-                  <option>Green Pepper</option>
-                  <option>Mushrooms</option>
-                  <option>Olives</option>
-                  <option>Jalapeno</option>
-                  <option>None</option>
-                </select>
-              </div>
-            </div>
-            <div class="row container p-2">
-              <div class="col">
-                <p>Veggie2</p>
-              </div>
-              <div class="col-sm-4" class="form-option">
-                <select required class="form-control" id="veggie2">
-                  <option></option>
-                  <option>Onions</option>
-                  <option>Tomatoes</option>
-                  <option>Green Pepper</option>
-                  <option>Mushrooms</option>
-                  <option>Olives</option>
-                  <option>Jalapeno</option>
-                  <option>None</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
-          </form>
-        </div>
-      </div>
 
-      <div class="column">
-        <div class="card p-4">
-          <div class="card p-2 text-center">
-              <h6>Cart</h6>
-            <div>
-            <br>
-              <div class="card p-2 text-center">
-                <div id="order-details">
-                  <p><a id="order-details-dropdown" style= "display: inline;">Custom Pizza</a></p>
-                  <ul id="pizza-details"></ul>
-                </div>
-                <h6>Total price: <span id="cost"></span> </h6>
-                <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
-              </div>
+  <img src="img/sausage-slate-compressed.webp" alt="logo" class="center">
+  <div class="column">
+    <div class="card1 p-4">
+      <form class="form-group" id="pizzaOrder">
+        <div class="row container p-2">
+          <div class="col">
+            <p>Size</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="size">
+              <option></option>
+              <option value="Small">Small, 10"</option>
+              <option value="Medium">Medium, 14"</option>
+              <option value="Large">Large, 18"</option>
+              <option value="XL">Extra-Large, 22"</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Sauce</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="sauce">
+              <option></option>
+              <option>Robust Tomato Sauce</option>
+              <option>Alfredo Sauce</option>
+              <option>Garlic Parmesan White Sauce</option>
+              <option>Pesto</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Cheese</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="cheese">
+              <option></option>
+              <option>Regular cheese</option>
+              <option>Light cheese</option>
+              <option>Extra cheese</option>
+              <option>No cheese</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Meat 1</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="meat1">
+              <option></option>
+              <option>Pepperoni</option>
+              <option>Sausage</option>
+              <option>Ham</option>
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Bacon</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Meat 2</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="meat2">
+              <option></option>
+              <option>Pepperoni</option>
+              <option>Sausage</option>
+              <option>Ham</option>
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Bacon</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Veggie 1</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="veggie1">
+              <option></option>
+              <option>Onions</option>
+              <option>Tomatoes</option>
+              <option>Green Pepper</option>
+              <option>Mushrooms</option>
+              <option>Olives</option>
+              <option>Jalapeno</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+        <div class="row container p-2">
+          <div class="col">
+            <p>Veggie2</p>
+          </div>
+          <div class="col-sm-4" class="form-option">
+            <select required class="form-control" id="veggie2">
+              <option></option>
+              <option>Onions</option>
+              <option>Tomatoes</option>
+              <option>Green Pepper</option>
+              <option>Mushrooms</option>
+              <option>Olives</option>
+              <option>Jalapeno</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-danger" style="margin-left: 35%;" ;" id="submit-custom-pizza">Place
+          Order</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card2 p-4 text-center">
+      
+        <h6>Cart</h6>
+        <div>
+          <br>
+            <div id="order-details">
+              <p><a id="order-details-dropdown">Pizza</a></p>
+              <ul id="pizza-details"></ul>
             </div>
+            <h6>Total price:$ <span id="cost"></span> </h6>
+            <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
           </div>
         </div>
       </div>
-    
+    </div>
+  </div>
+
 </body>
 
 </html>
-
-
-

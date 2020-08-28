@@ -20,13 +20,32 @@ body{
   margin-top: 10px;
 }
 
-
-
 ul {
   font-size: 13pt;
 }
-.card{
+.card1{
   background: rgb(162, 167, 165);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 50% solid black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 8px 16px 0 black;
+  border-radius: 5%;
+  
+}
+.card2{
+  background: rgb(162, 167, 165);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 50% solid black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 8px 16px 0 black;
+  border-radius: 5%;
+  
 }
 
 .center{

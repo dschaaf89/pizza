@@ -11,21 +11,21 @@ function PizzaOrder(size, cheese) {
   this.price = 0;
 }
 PizzaOrder.prototype.cost = function () {
-  if(this.size ==="small"){
+  if(this.size ==="Small"){
     this.price += 6;
-  }else if (this.size ==="medium"){
+  }else if (this.size ==="Medium"){
     this.price += 8;
-  }else if (this.size ==="large"){
+  }else if (this.size ==="Large"){
     this.price += 12;
   }else if (this.size ==="XL")
     this.price += 15
-  if(this.cheese ==="regular cheese") {
+  if(this.cheese ==="Regular cheese") {
     this.price += 1;
-  } else if (this.cheese ==="light cheese") {
+  } else if (this.cheese ==="Light cheese") {
     this.price += 0.50;
-  } else if (this.cheese ==="extra cheese") {
+  } else if (this.cheese ==="Extra cheese") {
     this.price += 1.5;
-  } else if (this.cheese ==="none") {
+  } else if (this.cheese ==="None") {
     this.price += 0;
   }
   this.price += this.sauce;
@@ -61,14 +61,14 @@ $(document).ready(function (event){
     $("#order-details-dropdown").show();
     $("#cost").text(pizzaOrder.totalPrice);
     $("#pizza-details").append("<ul><li>" + details + "</li></ul>");
-    console.log('#pizza-details');
-    $("#size, #sauce, #cheese,#meat1,#meat2,#veggie1, #veggie2,").val("");
+    
+    // $("#size, #sauce, #cheese,#meat1,#meat2,#veggie1, #veggie2,").val("");
   });
   $("#order-details-dropdown").click(function() {
     $("#pizza-details").toggle();
   });
   })
   $("#checkout-btn").click(function() {
-    location.reload();
+    document.location.reload(true);
     
   })
