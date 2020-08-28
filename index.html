@@ -17,7 +17,7 @@
     <h1> Welcome to Logan's Pizzeria. Please submit your order below</h1>
   </div>
 
-  <img src="img/sausage-slate-compressed.webp" alt="logo" class="center">
+  <img src="img/sausage-slate-compressed.webp" alt="logo" class="center" id= pic>
   <div id="order-form">
     <div class="column">
       <div class="card1 p-4 ">
@@ -153,6 +153,7 @@
             <ul id="pizza-details"></ul>
           </div>
           <h6>Total price:$ <span id="cost"></span> </h6>
+          <div id= "option"></div>
           <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
         </div>
       </div>
@@ -164,7 +165,7 @@
   <div id="greeting">
     <div class="card">
 
-      <p>Welcome to Logan's Pizzaria. we specialize in pizza. We hope you enjoy your pizza. please select weather you
+      <p>Welcome to Logan's Pizzeria. we specialize in pizza. We hope you enjoy your pizza. please select weather you
         are going to pick up your order or need it delivered.</p>
 
       <button id="delivery" class="btn btn-primary ">Delivery</button>
@@ -179,21 +180,21 @@
       <form id="address">
         <div class="row">
           <div class="col-sm-6">
-            <label for="firstName">First Name</label><input required type="text" class="form-control address-spacing">
+            <label for="firstName">First Name</label><input required type="text" class="form-control "id = "firstName">
           </div>
           <div class="col-sm-6">
-            <label for="lastName">Last Name</label><input required type="text" class="form-control address-spacing">
+            <label for="lastName">Last Name</label><input required type="text" class="form-control" id = lastName>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <label for="address">Address</label><input required type="text" class="form-control" id="street-add">
+            <label for="address">Address</label><input required type="text" class="form-control" id="street">
           </div>
           <div class="col-sm-3">
-            <label for="city">City</label><input required type="text" class="form-control" id="city-add">
+            <label for="city">City</label><input required type="text" class="form-control" id="city">
           </div>
           <div class="col-sm-2">
-            <label for="zipCode">Zipcode</label><input required type="text" class="form-control" id="zip-add">
+            <label for="zipCode">Zipcode</label><input required type="text" class="form-control" id="zip">
           </div>
         </div>
         <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>

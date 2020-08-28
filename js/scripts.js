@@ -11,33 +11,33 @@ function PizzaOrder(size, cheese) {
   this.price = 0;
 }
 PizzaOrder.prototype.cost = function () {
-  if(this.size ==="Small"){
+  if (this.size === "Small") {
     this.price += 6;
-  }else if (this.size ==="Medium"){
+  } else if (this.size === "Medium") {
     this.price += 8;
-  }else if (this.size ==="Large"){
+  } else if (this.size === "Large") {
     this.price += 12;
-  }else if (this.size ==="XL")
+  } else if (this.size === "XL")
     this.price += 15
-  if(this.cheese ==="Regular cheese") {
+  if (this.cheese === "Regular cheese") {
     this.price += 1;
-  } else if (this.cheese ==="Light cheese") {
+  } else if (this.cheese === "Light cheese") {
     this.price += 0.50;
-  } else if (this.cheese ==="Extra cheese") {
+  } else if (this.cheese === "Extra cheese") {
     this.price += 1.5;
-  } else if (this.cheese ==="No cheese") {
+  } else if (this.cheese === "No cheese") {
     this.price += 0;
   }
-  if (this.meat1 === "None"){
+  if (this.meat1 === "None") {
     this.price += 0;
   }
-  if (this.meat2 === "None"){
+  if (this.meat2 === "None") {
     this.price += 0;
   }
-  if (this.veggie1 === "None"){
+  if (this.veggie1 === "None") {
     this.price += 0;
   }
-  if (this.veggie2 === "None"){
+  if (this.veggie2 === "None") {
     this.price += 0;
   }
   this.price += this.sauce;
@@ -47,28 +47,54 @@ PizzaOrder.prototype.cost = function () {
   this.price += this.veggie2
   return this.price;
 }
-PizzaOrder.prototype.totalPrice=function(){
+PizzaOrder.prototype.totalPrice = function () {
   let totalPrice = 0;
-  for (let i = 0; i < pizzaArray.length; i ++) {
-    totalPrice += pizzaArray[i]; 
+  for (let i = 0; i < pizzaArray.length; i++) {
+    totalPrice += pizzaArray[i];
   }
   return totalPrice;
 }
+function Address(firstName,lastName,address,city,zipCode){
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.streetAddress= address;
+  this.city= city;
+  this.zipCode=zipCode;
+  this.deliveryAddress = (firstName+" "+lastName+", "+address+", "+city+", "+zipCode);
+}
+
 
 // -----------------------user interface--------------------------
-$(document).ready(function (event){
-  $("#pickup").click(function() {
+$(document).ready(function (event) {
+  $("#pickup").click(function () {
     $("#greeting").hide();
+    $("#pic").hide();
     $("#order-form").show();
     $("#cart").show();
+    $("#option").text("PICKUP BY CUSTOMER");
   });
-  $("#delivery").click(function() {
+  $("#delivery").click(function () {
     $("#greeting").hide();
+    $("#pic").hide();
     $("#address-form").show();
+
   });
+  $("#address").submit(function (event) {
+    event.preventDefault();
+    let firstName = $('input#firstName').val();
+    let lastName = $('input#lastName').val();
+    let address = $('input#street').val();
+    let city = $('input#city').val();
+    let zipCode = $('input#zip').val();
+    let delivery = new Address(firstName,lastName,address,city,zipCode);
+    $("#address-form").hide();
+    $("#order-form").show();
+    $("#cart").show();
+    $("#option").text("DELIVER TO: " + delivery.deliveryAddress);
+  })
 
 
-  $('form#pizzaOrder').submit(function (event){
+  $('form#pizzaOrder').submit(function (event) {
     event.preventDefault();
     let size = $('select#size').val();
     let sauce = $('select#sauce').val();
@@ -77,25 +103,25 @@ $(document).ready(function (event){
     let meat2 = $('select#meat2').val();
     let veggie1 = $('select#veggie1').val();
     let veggie2 = $('select#veggie2').val();
-    let pizzaOrder = new PizzaOrder(size,cheese);
-    let details = (size+", "+sauce+", "+cheese+", "+meat1+", "+meat2+", "+veggie1+" and "+veggie2)
-    let price =pizzaOrder.cost();
+    let pizzaOrder = new PizzaOrder(size, cheese);
+    let details = (size + ", " + sauce + ", " + cheese + ", " + meat1 + ", " + meat2 + ", " + veggie1 + " and " + veggie2)
+    let price = pizzaOrder.cost();
     pizzaArray.push(price);
     $("#order-details-dropdown").show();
     $("#cost").text(pizzaOrder.totalPrice);
     $("#pizza-details").append("<ul><li>" + details + "</li></ul>");
-    
+
     // $("#size, #sauce, #cheese,#meat1,#meat2,#veggie1, #veggie2,").val("");
   });
-  $("#order-details-dropdown").click(function() {
+  $("#order-details-dropdown").click(function () {
     $("#pizza-details").toggle();
   });
-  $("#checkout-btn").click(function(){
+  $("#checkout-btn").click(function () {
     location.reload();
   })
-  })
-  
-    
-    
+})
+
+
+
 
 
