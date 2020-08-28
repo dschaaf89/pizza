@@ -60,5 +60,7 @@ $(document).ready(function (event){
     $("#cost").text(pizzaOrder.totalPrice);
     
   })
-  
+  $("#checkout-btn").click(function() {
+    location.reload();
+  })
 })
