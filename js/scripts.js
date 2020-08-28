@@ -57,6 +57,17 @@ PizzaOrder.prototype.totalPrice=function(){
 
 // -----------------------user interface--------------------------
 $(document).ready(function (event){
+  $("#pickup").click(function() {
+    $("#greeting").hide();
+    $("#order-form").show();
+    $("#cart").show();
+  });
+  $("#delivery").click(function() {
+    $("#greeting").hide();
+    $("#address-form").show();
+  });
+
+
   $('form#pizzaOrder').submit(function (event){
     event.preventDefault();
     let size = $('select#size').val();

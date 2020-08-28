@@ -87,3 +87,9 @@ p{
 .card{
   background: rgb(162, 167, 165);
 }
+#address{
+  margin: 5%;
+}
+#address-form{
+  display:none;
+}
