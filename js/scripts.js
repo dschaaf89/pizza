@@ -1,3 +1,5 @@
+// -----------------------backend logic----------------------
+let pizzaArray = [];
 function PizzaOrder(size, cheese) {
   this.size = size;
   this.sauce = 1;
@@ -33,8 +35,15 @@ PizzaOrder.prototype.cost = function () {
   this.price += this.veggie2
   return this.price;
 }
+PizzaOrder.prototype.totalPrice=function(){
+  let totalPrice = 0;
+  for (let i = 0; i < pizzaArray.length; i ++) {
+    totalPrice += pizzaArray[i]; 
+  }
+  return totalPrice;
+}
 
-
+// -----------------------user interface--------------------------
 $(document).ready(function (event){
   $('form#pizzaOrder').submit(function (event){
     event.preventDefault();
@@ -47,7 +56,9 @@ $(document).ready(function (event){
     let veggie2 = $('select#veggie2').val();
     let pizzaOrder = new PizzaOrder(size,cheese);
     let price =pizzaOrder.cost();
-    console.log(price);
+    pizzaArray.push(price);
+    $("#cost").text(pizzaOrder.totalPrice);
+    
   })
   
 })
