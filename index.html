@@ -13,21 +13,26 @@
 <body>
   <div class ="container" >
     <div class ="card">
+      <h3>Custom Pizza Order Form</h3>
       <form class= "form-group" id="pizzaOrder">
+        <label> size</label>
         <select required class="form-control" id="size">
           <option></option>
-          <option>small 10 in</option>
-          <option>medium 14 in</option>
-          <option>large 18 in</option>
-          <option>Xtra Large 22 in</option>
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+          <option>XL</option>
         </select>
+        
+        <label> sauce</label>
         <select required class="form-control" id="sauce">
           <option></option>
           <option>robust tomato sauce</option>
-          <option>alfrado sauce</option>
-          <option>garlic parmasean white sauce</option>
+          <option>alfredo sauce</option>
+          <option>garlic parmesan white sauce</option>
           <option>pesto</option>
         </select>
+        <label> cheese</label>
         <select required class="form-control" id="cheese">
           <option></option>
           <option>regular cheese</option>
@@ -35,26 +40,29 @@
           <option>extra cheese</option>
           <option>no cheese</option>
         </select>
+        <label> Meat 1</label>
         <select required class="form-control" id="meat1">
           <option></option>
           <option>pepperoni</option>
-          <option>suasage</option>
+          <option>sausage</option>
           <option>ham</option>
           <option>beef</option>
           <option>chicken</option>
           <option>bacon</option>
           <option>none</option>
         </select>
+        <label> meat 2</label>
         <select required class="form-control" id="meat2">
           <option></option>
           <option>pepperoni</option>
-          <option>suasage</option>
+          <option>sausage</option>
           <option>ham</option>
           <option>beef</option>
           <option>chicken</option>
           <option>bacon</option>
           <option>none</option>
         </select>
+        <label> Veggie 1</label>
         <select required class="form-control" id="veggie1">
           <option></option>
           <option>onions</option>
@@ -65,7 +73,8 @@
           <option>jalapeno</option>
           <option>none</option>
         </select>
-        <select required class="form-control" id="veggie1">
+        <label> Veggie 2</label>
+        <select required class="form-control" id="veggie2">
           <option></option>
           <option>onions</option>
           <option>mushrooms</option>
@@ -75,7 +84,7 @@
           <option>jalapeno</option>
           <option>none</option>
         </select>
-        
+        <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
       </form>
     </div>
     </div>
