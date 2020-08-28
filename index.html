@@ -14,17 +14,18 @@
 
 <body>
   <div class="jumbotron">
-    <h2> Welcome to Logan's Pizzeria. Please submit your order below</h2>
+    <h2> Welcome to Ray' Pizzeria. Please submit your order below</h2>
   </div>
-    
+ 
+  <img src="img/pizzeria.png" alt="logo" class = "center">  
       <div class="column">
         <div class="card p-4">
           <form class="form-group" id="pizzaOrder">
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Size</p>
               </div>
-              <div class="col-xs  -6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="size">
                   <option></option>
                   <option value="small">Small, 10"</option>
@@ -35,10 +36,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Sauce</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="sauce">
                   <option></option>
                   <option>robust tomato sauce</option>
@@ -49,10 +50,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Cheese</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="cheese">
                   <option></option>
                   <option>regular cheese</option>
@@ -63,10 +64,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Meat 1</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="meat1">
                   <option></option>
                   <option>pepperoni</option>
@@ -80,10 +81,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Meat 2</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="meat2">
                   <option></option>
                   <option>pepperoni</option>
@@ -97,10 +98,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Veggie 1</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="veggie1">
                   <option></option>
                   <option>Onions</option>
@@ -114,10 +115,10 @@
               </div>
             </div>
             <div class="row container p-2">
-              <div class="col-xs-6">
+              <div class="col">
                 <p>Veggie2</p>
               </div>
-              <div class="col-xs-6" class="form-option">
+              <div class="col-sm-4" class="form-option">
                 <select required class="form-control" id="veggie2">
                   <option></option>
                   <option>Onions</option>
@@ -143,7 +144,7 @@
             <br>
               <div class="card p-2 text-center">
                 <div id="order-details">
-                  <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+                  <p><a id="order-details-dropdown" style= "display: inline;">Custom Pizza</a></p>
                   <ul id="pizza-details"></ul>
                 </div>
                 <h6>Total price: <span id="cost"></span> </h6>

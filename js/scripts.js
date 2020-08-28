@@ -55,19 +55,20 @@ $(document).ready(function (event){
     let veggie1 = $('select#veggie1').val();
     let veggie2 = $('select#veggie2').val();
     let pizzaOrder = new PizzaOrder(size,cheese);
-    let details = (size+sauce+cheese+meat1+meat2+veggie1+veggie2)
+    let details = (size+", "+sauce+", "+cheese+", "+meat1+", "+meat2+", "+veggie1+" and "+veggie2)
     let price =pizzaOrder.cost();
     pizzaArray.push(price);
-    $("#pizza-details-dropdown").show();
+    $("#order-details-dropdown").show();
     $("#cost").text(pizzaOrder.totalPrice);
     $("#pizza-details").append("<ul><li>" + details + "</li></ul>");
     console.log('#pizza-details');
     $("#size, #sauce, #cheese,#meat1,#meat2,#veggie1, #veggie2,").val("");
   });
-  $("#pizza-details-dropdown").click(function() {
+  $("#order-details-dropdown").click(function() {
     $("#pizza-details").toggle();
   });
   })
   $("#checkout-btn").click(function() {
     location.reload();
+    
   })

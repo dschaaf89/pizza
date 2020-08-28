@@ -1,12 +1,10 @@
 .jumbotron{
-  background:rgb(109, 203, 240);
+  background:rgb(147, 190, 174);
   text-align: center;
 }
-.card{
-  background: tan;
-}
+
 body{
-  background: cyan;
+  background: rgb(226, 218, 219);
 }
 /* Float four columns side by side */
 .column {
@@ -14,6 +12,30 @@ body{
   width: 50%;
   padding: 0 10px;
 }
-#pizza-details-dropdown{
+#order-details-dropdown,#pizza-details{
   display: none;
+}
+#order-details, #default-pizza-details {
+  text-align: left;
+  margin-top: 10px;
+}
+
+
+
+ul {
+  font-size: 13pt;
+}
+.card{
+  background: rgb(162, 167, 165);
+}
+
+.center{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 50% solid black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 8px 16px 0 black;
+  
 }
