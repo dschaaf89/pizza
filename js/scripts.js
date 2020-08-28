@@ -95,13 +95,12 @@ $(document).ready(function (event) {
     let details = (size + ", " + sauce + ", " + cheese + ", " + meat1 + ", " + meat2 + ", " + veggie1 + " and " + veggie2)
     let price = pizzaOrder.cost();
     pizzaArray.push(price);
-    $("#order-details-dropdown").show();
+    $("#order-dropdown").show();
     $("#cost").text(pizzaOrder.totalPrice);
     $("#pizza-details").append("<ul><li>" + details + "</li></ul>");
 
-    // $("#size, #sauce, #cheese,#meat1,#meat2,#veggie1, #veggie2,").val("");
   });
-  $("#order-details-dropdown").click(function () {
+  $("#order-dropdown").click(function () {
     $("#pizza-details").toggle();
   });
   $("#checkout-btn").click(function () {
