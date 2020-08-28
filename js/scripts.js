@@ -24,22 +24,10 @@ PizzaOrder.prototype.cost = function () {
   } else if (this.cheese === "Light cheese") {
     this.price += 0.50;
   } else if (this.cheese === "Extra cheese") {
-    this.price += 1.5;
+    this.price += 2;
   } else if (this.cheese === "No cheese") {
     this.price += 0;
   }
-  // if (this.meat1 === "None") {
-  //   this.price += 0;
-  // }
-  // if (this.meat2 === "None") {
-  //   this.price += 0;
-  // }
-  // if (this.veggie1 === "None") {
-  //   this.price += 0;
-  // }
-  // if (this.veggie2 === "None") {
-  //   this.price += 0;
-  // }
   this.price += this.sauce;
   this.price += this.meat1
   this.price += this.meat2
@@ -54,13 +42,13 @@ PizzaOrder.prototype.totalPrice = function () {
   }
   return totalPrice;
 }
-function Address(firstName,lastName,address,city,zipCode){
+function Address(firstName, lastName, address, city, zipCode) {
   this.firstName = firstName;
   this.lastName = lastName;
-  this.streetAddress= address;
-  this.city= city;
-  this.zipCode=zipCode;
-  this.deliveryAddress = (firstName+" "+lastName+", "+address+", "+city+", "+zipCode);
+  this.streetAddress = address;
+  this.city = city;
+  this.zipCode = zipCode;
+  this.deliveryAddress = (firstName + " " + lastName + ", " + address + ", " + city + ", " + zipCode);
 }
 
 
@@ -71,7 +59,7 @@ $(document).ready(function (event) {
     $("#pic").hide();
     $("#order-form").show();
     $("#cart").show();
-    $("#option").text("PICKUP BY CUSTOMER");
+    $("#option").text("Customer is going to Pickup");
   });
   $("#delivery").click(function () {
     $("#greeting").hide();
@@ -86,11 +74,11 @@ $(document).ready(function (event) {
     let address = $('input#street').val();
     let city = $('input#city').val();
     let zipCode = $('input#zip').val();
-    let delivery = new Address(firstName,lastName,address,city,zipCode);
+    let delivery = new Address(firstName, lastName, address, city, zipCode);
     $("#address-form").hide();
     $("#order-form").show();
     $("#cart").show();
-    $("#option").text("DELIVER TO: " + delivery.deliveryAddress);
+    $("#option").text("Address to Deliver to : " + delivery.deliveryAddress);
   })
 
 
