@@ -68,3 +68,22 @@ h2{
 p{
   font-weight: bolder;
 }
+#order-form,#cart{
+  display: none;
+}
+
+#greeting{
+  background: rgb(162, 167, 165);
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 50% solid black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 8px 16px 0 black;
+  border-radius: 5%;
+  padding: 5%;
+}
+.card{
+  background: rgb(162, 167, 165);
+}
