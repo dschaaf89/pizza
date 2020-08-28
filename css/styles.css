@@ -1,6 +1,9 @@
 .jumbotron{
   background:rgb(147, 190, 174);
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:xx-large;
+  font-weight: bolder;
 }
 
 body{
@@ -30,7 +33,7 @@ ul {
   margin-right: auto;
   border: 50% solid black;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   box-shadow: 0 8px 16px 0 black;
   border-radius: 5%;
   
@@ -41,7 +44,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
   border: 50% solid black;
-  margin-top: 5%;
+  margin-top: 25%;
   margin-bottom: 5%;
   box-shadow: 0 8px 16px 0 black;
   border-radius: 5%;
@@ -57,4 +60,11 @@ display: block;
   margin-bottom: 5%;
   box-shadow: 0 8px 16px 0 black;
   
+}
+h2{
+  text-align: center;
+  margin-bottom: 5%;
+}
+p{
+  font-weight: bolder;
 }

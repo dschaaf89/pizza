@@ -25,7 +25,19 @@ PizzaOrder.prototype.cost = function () {
     this.price += 0.50;
   } else if (this.cheese ==="Extra cheese") {
     this.price += 1.5;
-  } else if (this.cheese ==="None") {
+  } else if (this.cheese ==="No cheese") {
+    this.price += 0;
+  }
+  if (this.meat1 === "None"){
+    this.price += 0;
+  }
+  if (this.meat2 === "None"){
+    this.price += 0;
+  }
+  if (this.veggie1 === "None"){
+    this.price += 0;
+  }
+  if (this.veggie2 === "None"){
     this.price += 0;
   }
   this.price += this.sauce;
