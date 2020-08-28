@@ -67,8 +67,12 @@ $(document).ready(function (event){
   $("#order-details-dropdown").click(function() {
     $("#pizza-details").toggle();
   });
+  $("#checkout-btn").click(function(){
+    location.reload();
   })
-  $("#checkout-btn").click(function() {
-    document.location.reload(true);
+  })
+  
     
-  })
+    
+
+
