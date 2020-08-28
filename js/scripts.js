@@ -28,18 +28,18 @@ PizzaOrder.prototype.cost = function () {
   } else if (this.cheese === "No cheese") {
     this.price += 0;
   }
-  if (this.meat1 === "None") {
-    this.price += 0;
-  }
-  if (this.meat2 === "None") {
-    this.price += 0;
-  }
-  if (this.veggie1 === "None") {
-    this.price += 0;
-  }
-  if (this.veggie2 === "None") {
-    this.price += 0;
-  }
+  // if (this.meat1 === "None") {
+  //   this.price += 0;
+  // }
+  // if (this.meat2 === "None") {
+  //   this.price += 0;
+  // }
+  // if (this.veggie1 === "None") {
+  //   this.price += 0;
+  // }
+  // if (this.veggie2 === "None") {
+  //   this.price += 0;
+  // }
   this.price += this.sauce;
   this.price += this.meat1
   this.price += this.meat2
