@@ -93,10 +93,10 @@ $(document).ready(function (event) {
     let veggie2 = $('select#veggie2').val();
     let pizzaOrder = new PizzaOrder(size, cheese);
     let details = (size + ", " + sauce + ", " + cheese + ", " + meat1 + ", " + meat2 + ", " + veggie1 + " and " + veggie2)
-    let price = pizzaOrder.cost();
-    pizzaArray.push(price);
+    //let price = pizzaOrder.cost();
+    pizzaArray.push(pizzaOrder.cost());
     $("#order-dropdown").show();
-    $("#cost").text(pizzaOrder.totalPrice);
+    $("#cost").text(pizzaOrder.totalPrice());
     $("#pizza-details").append("<ul><li>" + details + "</li></ul>");
 
   });
